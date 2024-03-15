@@ -8,7 +8,14 @@
         body { font-family: Arial, sans-serif; margin: 20px; padding: 20px; }
         .container { max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 5px; }
         input, button { margin: 10px 0; padding: 10px; }
-        #results { margin-top: 20px; }
+        #results { 
+            margin-top: 20px; 
+            white-space: pre-wrap; /* Auto wrapping */
+        }
+        .github-link { /* Center align the GitHub link */
+            text-align: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -34,9 +41,11 @@
                 <p>Block Hash: ${data.block_hash}</p>
                 <p>Random Number: ${data.random_number}</p>
                 <p>Timestamp: ${data.timestamp}</p>
+                <div class="github-link">
+                    <a href="https://github.com/tytech039/monero-random-num" target="_blank">Visit my GitHub</a>
+                </div>
             `;
         }
     </script>
 </body>
 </html>
-
