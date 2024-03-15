@@ -4,6 +4,7 @@ from monero.daemon import Daemon
 from monero.backends.jsonrpc import JSONRPCDaemon
 from datetime import datetime
 import random
+import os
 
 app = Flask(__name__)
 
@@ -41,5 +42,5 @@ def get_data():
         'timestamp': current_time
     })
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80)
+port = int(os.getenv('PORT', 5000))  # Default to 5000 if PORT not set
+app.run(host='0.0.0.0', port=port)
