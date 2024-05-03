@@ -8,7 +8,7 @@ import os
 
 app = Flask(__name__)
 
-daemon = Daemon(JSONRPCDaemon(host="node.tytech038.com", port=18081))
+daemon = Daemon(JSONRPCDaemon(host="moneronode.org", port=18081))
 
 @app.route('/')
 def index():
